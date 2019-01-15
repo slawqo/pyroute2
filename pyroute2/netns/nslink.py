@@ -143,8 +143,8 @@ class NetNS(RTNL_API, RemoteSocket):
         self.child = os.fork()
         if self.child == 0:
             # child process
-            trnsp_in.close()
-            trnsp_out.close()
+            #trnsp_in.close()
+            #trnsp_out.close()
             try:
                 setns(self.netns, self.flags)
             except OSError as e:
